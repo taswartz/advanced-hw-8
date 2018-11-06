@@ -1,5 +1,6 @@
+import readline
 import operator
-
+from colored import fg, bg, attr
 
 operators = {
     '+': operator.add,
@@ -29,7 +30,10 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        if result < 0:
+            print("Result: ", fg(1), result, fg(15))
+        else:
+            print("Result: ", result, fg(15))
 
 if __name__ == '__main__':
     main()
