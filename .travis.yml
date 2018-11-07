@@ -2,7 +2,7 @@ language: python
 python:
   - "3.5"
 install:
-  - pip3 install coverall
+  - pip3 install coveralls
   - pip3 install colored
 script:
   - coverage run -m unittest test_rpn.py
