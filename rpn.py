@@ -10,6 +10,13 @@ operators = {
     '^': operator.pow,
 }
 
+def funcy(someArg):
+    newVal = someArg + 3
+    if newVal > 5:
+        newVal = newVal - 100
+    else:
+        newVal = newVal + 1000
+
 def calculate(myarg):
     stack = list()
     for token in myarg.split():
